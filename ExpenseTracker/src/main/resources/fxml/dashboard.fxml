@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.expensetracker.controller.DashboardController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@../css/style.css">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" styleClass="top-bar">
+            <Label text="💰 Expense Tracker" styleClass="app-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="+ Add Expense" fx:id="btnAddExpense" onAction="#onAddExpense" styleClass="primary-btn"/>
+            <Button text="✏ Edit" fx:id="btnEditExpense" onAction="#onEditExpense" styleClass="secondary-btn"/>
+    		<Button text="🗑 Delete" fx:id="btnDeleteExpense" onAction="#onDeleteExpense" styleClass="danger-btn"/>
+    		<Button text="📊 Monthly Chart" fx:id="btnMonthlyChart" onAction="#onMonthlyChart" styleClass="secondary-btn"/>
+    		<Button text="📁 Export CSV" fx:id="btnExportCSV" onAction="#onExportCSV" styleClass="primary-btn"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER TABLE -->
+    <center>
+        <TableView fx:id="tableExpenses" styleClass="expense-table">
+            <columns>
+            	<TableColumn text="#" fx:id="colDisplayNumber" prefWidth="50"/>
+                <TableColumn text="Title" fx:id="colTitle" prefWidth="200"/>
+                <TableColumn text="Amount" fx:id="colAmount" prefWidth="100"/>
+                <TableColumn text="Category" fx:id="colCategory" prefWidth="150"/>
+                <TableColumn text="Date" fx:id="colDate" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- BOTTOM SECTION -->
+    <bottom>
+        <HBox spacing="20" alignment="CENTER_RIGHT" styleClass="bottom-bar">
+        <padding>
+        	<Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+            <Label text="Total: " styleClass="total-label"/>
+            <Label fx:id="lblTotal" text="₹0.00" styleClass="total-value"/>
+        </HBox>
+    </bottom>
+</BorderPane>
