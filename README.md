@@ -172,8 +172,8 @@ This application allows users to Add, Edit, Delete, and View expenses, along wit
 
 ---
 
-![Dashboard](src/main/resources/images/Dashboard.png)
+![Dashboard](ExpenseTracker/src/main/resources/images/Dashboard.png)
 
-![Add Expense Form](src/main/resources/images/Add_Expense.png)
+![Add Expense Form](ExpenseTracker/src/main/resources/images/Add_Expense.png)
 
-![Monthly Analytics Chart](src/main/resources/images/Monthly_Chart.png)
+![Monthly Analytics Chart](ExpenseTracker/src/main/resources/images/Monthly_Chart.png)
